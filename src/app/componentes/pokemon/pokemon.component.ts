@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HistoriaImagen } from './../../modelos/historia-imagen'
 @Component({
   selector: 'app-pokemon',
@@ -7,6 +7,14 @@ import { HistoriaImagen } from './../../modelos/historia-imagen'
 })
 export class PokemonComponent{
 
-@Input() public pokemon!: HistoriaImagen;
+  @Input() public pokemon!: HistoriaImagen;
+  @Output() public idPokemon = new EventEmitter<number>();
+
+
+  public emitirId(): void {
+    this.idPokemon.emit(this.pokemon.id);
+  }
+
+
 
 }

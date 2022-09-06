@@ -27,6 +27,11 @@ export class AppComponent {
     this.elementosGuardados.push(nuevo);
   }
 
+  public borrarElemento(pos: number): void{
+    this.elementosGuardados.splice(pos,1);
+    console.log('la posicion es', pos)
+
+  }
 
 }
 

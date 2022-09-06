@@ -7,4 +7,4 @@ hola :D
 ></app-mostrar-imagen>
 {{ elementosGuardados.length }}
 <app-formulario (salida)="escuchandoAlHijo()" (salidaString)="escuchandoDetalle($event)" (enviarDato)="agregarNuevo($event)"></app-formulario>
-<app-listar-pokemon  [pokemones]="elementosGuardados"></app-listar-pokemon>
+<app-listar-pokemon  [pokemones]="elementosGuardados" (posIndex)="borrarElemento($event)"></app-listar-pokemon>

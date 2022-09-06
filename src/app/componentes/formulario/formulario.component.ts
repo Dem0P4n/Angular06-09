@@ -37,7 +37,7 @@ export class FormularioComponent  {
     const copia: HistoriaImagen = {
       ...this.nuevoHistorial
     }
-    this.enviarDato.emit(copia)
+    this.enviarDato.emit(copia);
 
     this.nuevoHistorial.nombre = '';
     this.nuevoHistorial.detalle = '';
